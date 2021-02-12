@@ -1,17 +1,17 @@
 {
-  "name": "starter-2d",
+  "name": "starter-3d",
   "version": "1.0.0",
   "license": "BSD-3-Clause",
   "scripts": {
     "start": "node ./ecs/src/cli/index.js"
   },
   "dependencies": {
-    "pixi-particles": "^4.3.0",
-    "pixi-spine": "^2.1.10",
-    "pixi.js": "^5.3.3",
+    "hammerjs": "^2.0.8",
+    "three": "^0.125.2",
     "tick-knock": "https://github.com/Milkshake-Inc/tick-knock.git"
   },
   "devDependencies": {
+    "@types/hammerjs": "^2.0.38",
     "capitalize": "^2.0.3",
     "copy-webpack-plugin": "^6.2.0",
     "git-revision-webpack-plugin": "^3.0.6",
