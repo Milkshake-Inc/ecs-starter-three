@@ -1,36 +1,27 @@
-import { useQueries } from "@ecs/core/helpers";
 import TickerEngine from "@ecs/core/TickerEngine";
-import Space from "@ecs/plugins/space/Space";
+import { InputSystem } from "@ecs/plugins/input/systems/InputSystem";
+import Color from "@ecs/plugins/math/Color";
 import Transform from "@ecs/plugins/math/Transform";
 import Vector3 from "@ecs/plugins/math/Vector";
-import RenderSystem from "@ecs/plugins/render/3d/systems/RenderSystem";
-import { InputSystem } from "@ecs/plugins/input/systems/InputSystem";
 import FreeRoamCameraSystem from "@ecs/plugins/render/3d/systems/FreeRoamCameraSystem";
-import { LoadGLTF, LoadTexture } from "@ecs/plugins/tools/ThreeHelper";
-import { generateGradientSkybox } from "@ecs/plugins/render/3d/prefabs/GradientSkybox";
+import RenderSystem from "@ecs/plugins/render/3d/systems/RenderSystem";
+import Space from "@ecs/plugins/space/Space";
+import { LoadTexture } from "@ecs/plugins/tools/ThreeHelper";
 import {
     AmbientLight,
-    Box3,
     BoxGeometry,
-    CircleBufferGeometry,
     Color as ThreeColor,
     DirectionalLight,
     Fog,
     Mesh,
-    MeshBasicMaterial,
     MeshPhongMaterial,
     PCFSoftShadowMap,
     PerspectiveCamera,
-    Plane,
     PlaneGeometry,
     RepeatWrapping,
     Texture,
-    TextureLoader,
 } from "three";
-import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
-import { all, Entity, System } from "tick-knock";
-import Color from "@ecs/plugins/math/Color";
-import { Rotate } from "hammerjs";
+import { Entity } from "tick-knock";
 
 export default class ExampleSpace extends Space {
     protected darkTexture: Texture;
